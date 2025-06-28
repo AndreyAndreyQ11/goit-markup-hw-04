@@ -133,6 +133,7 @@ body {
   bottom: calc(0px - 1px - 24px);
   left: 0;
   bottom: -1px;
+  transform: translateY(calc(0px + 1px + 24px));
 }
 
 .header-item-a:hover,
@@ -182,6 +183,16 @@ body {
 /* #region order-service */
 .order-service {
   padding: 188px 0;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+
+  max-width: 1440px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .order-service-heading {
@@ -219,6 +230,8 @@ body {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
   cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-service-button:hover,
@@ -361,18 +374,29 @@ body {
 
 .our-team-item-list-messengers {
   display: flex;
+  justify-content: center;
   gap: 24px;
 }
 
 .item-messenger {
+  width: 40px;
+  height: 40px;
+}
+
+.item-messenger-a {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #4d5ae5;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #4d5ae5;
 }
+.item-messenger-a:hover,
+.item-messenger-a:focus {
+  background-color: #404bbf;
+}
+
 .item-messenger-svg {
   display: block;
   width: 24px;
